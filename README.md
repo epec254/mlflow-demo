@@ -12,13 +12,13 @@ This interactive demo is deployed as a Databricks app in your Databricks workspa
 
 <img width="1723" alt="image" src="https://i.imgur.com/MXhaayF.gif" />
 
-## Getting Started
+## Installing the demo
+
+**Estimated time: 10 minutes work + 10 minutes waiting for scripts to run**
 
 ## 🔧 Phase 1: Prerequisites Setup
 
 > ⚠️ **IMPORTANT**: Complete ALL items in this phase before proceeding to Phase 2. Each prerequisite is required for the demo to work properly.
-
-**Estimated time: 15-30 minutes**
 
 ### 1.1 Databricks Workspace
 
@@ -46,7 +46,7 @@ This interactive demo is deployed as a Databricks app in your Databricks workspa
   - See [Unity Catalog schema documentation](https://docs.databricks.com/aws/en/schemas/create-schema)
   - **Quick option**: If you created a workspace in step 1.1, you can use the `workspace.default` schema
 
-### 1.5 Install Databricks CLI
+### 1.5 Install & Connect Databricks CLI
 
 - [ ] **Install the Databricks CLI**
   - Follow the [installation guide](https://docs.databricks.com/aws/en/dev-tools/cli/install)
@@ -69,8 +69,6 @@ Before proceeding to Phase 2, verify you have:
 ## 🚀 Phase 2: Installation & Local Testing
 
 > ⚠️ **STOP**: Only proceed if you've completed ALL items in Phase 1 above.
-
-**Estimated time: 10-15 minutes**
 
 Run these commands in order from the project root directory:
 
@@ -117,8 +115,6 @@ Verify your local setup:
 
 > ⚠️ **STOP**: Only proceed if Phase 2 completed successfully and you can generate emails locally.
 
-**Estimated time: 10-20 minutes**
-
 ### 3.1 Configure App Permissions
 
 Your Databricks App needs specific permissions to access the the MLflow experiment and other resources in you created in the first steps.
@@ -148,9 +144,12 @@ Your Databricks App needs specific permissions to access the the MLflow experime
 
 **Model Serving Endpoint Access:**
 
-- [ ] Go to your model serving endpoint (typically `databricks-claude-3-7-sonnet`)
-- [ ] Go to Permissions tab
-- [ ] Grant **CAN QUERY** to your app's service principal
+- [ ] Go the Databricks App
+- [ ] Click on **Edit**
+- [ ] Click **Next**
+- [ ] Click **Add Resource** and choose **Serving Endpoint**
+- [ ] Select your model serving endpoint (`databricks-claude-3-7-sonnet` unless you changed the model during the step above)
+- [ ] Press **Save**
 - [ ] This allows the app to call the LLM for email generation
 
 ### 3.2 Deploy the Application
