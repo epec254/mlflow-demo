@@ -16,7 +16,7 @@ This interactive demo is deployed as a Databricks app in your Databricks workspa
 
 **Estimated time: 10 minutes work + 10 minutes waiting for scripts to run**
 
-[🎥 Watch a how-to video recording](https://www.youtube.com/watch?v=zdF3dp1q4sg)
+[🎥 Watch a how-to video recording](https://www.youtube.com/watch?v=L7a4TzAcmnQ&feature=youtu.be)
 
 ## 🔧 Phase 1: Prerequisites Setup
 
